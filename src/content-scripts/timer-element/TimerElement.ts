@@ -7,10 +7,12 @@ type Attr = 'value';
 
 export class TimerElement extends HTMLElement {
 	static observedAttributes: Attr[] = ['value'];
-	attributeChangedCallback(name: Attr, oldValue: Option<string>, value: Option<string>) {
+	attributeChangedCallback(name: Attr, _: Option<string>, value: Option<string>) {
 		switch (name) {
 			case 'value':
-				if (value !== null) this.$span.innerText = value;
+				if (value != null) {
+					this.$span.innerText = value;
+				}
 				break;
 		}
 	}

@@ -11,10 +11,6 @@ const manifest = {
 		default_title: 'ping',
 	},
 	icons: {},
-	background: {
-		service_worker: 'src/background.ts',
-		type: 'module',
-	},
 	content_scripts: [
 		{
 			js: ['src/content-scripts/main.ts', 'node_modules/@webcomponents/custom-elements/custom-elements.min.js'],

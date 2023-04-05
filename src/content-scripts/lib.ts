@@ -1,7 +1,7 @@
 import { RELOAD_SECONDS } from '../consts';
 import { AnyFunction } from '../types';
 
-export const getSecondsUntilReload = (inactiveTimer: number, secondsReload = RELOAD_SECONDS) => {
+export const secondsLeft = (inactiveTimer: number, secondsReload = RELOAD_SECONDS) => {
 	return secondsReload - inactiveTimer;
 };
 
