@@ -1,8 +1,9 @@
+export type AnyFunction = (...args: any) => any;
+export type Option<T> = T | null;
+
 export interface StorageItems {
 	active: boolean;
 }
-
-export type Option<T> = T | null;
 
 export interface ExtensionStorage<T> {
 	get: () => Promise<Record<string, any>>;
