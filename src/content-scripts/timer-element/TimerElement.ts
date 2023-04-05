@@ -19,12 +19,11 @@ export class TimerElement extends HTMLElement {
 		super();
 		if (!this.shadowRoot) {
 			this.#shadowRoot = this.attachShadow({ mode: 'open' });
-		} else this.#shadowRoot = this.shadowRoot;
-
-		this.#shadowRoot.innerHTML = String.raw`
+			this.#shadowRoot.innerHTML = String.raw`
             <span class="timer">0</span>
         `;
-		this.#shadowRoot.adoptedStyleSheets = [css];
+			this.#shadowRoot.adoptedStyleSheets = [css];
+		} else this.#shadowRoot = this.shadowRoot;
 	}
 
 	static define(tag = 'timer-element') {
